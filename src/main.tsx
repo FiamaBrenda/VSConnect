@@ -5,11 +5,17 @@ import ReactDOM from 'react-dom/client'
 import Home from  './pages/Home/'
 
 // estilizacao
-import "./style.css"
+import './index.css'
+import ListaServicos from './pages/ListaServicos'
+import Footer from './components/Footer'
+import Header from './components/Header'
 
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
+    <Header/>
     <Home />
+    {/* <ListaServicos/> */}
+    <Footer/>
   </React.StrictMode>,
 )
