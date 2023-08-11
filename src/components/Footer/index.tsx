@@ -5,6 +5,7 @@ import imgInstagram from "../../assets/images/instagram.svg"
 import imgFacebook from "../../assets/images/facebook.svg"
 import imgLinkedin from "../../assets/images/linkedin.svg"
 import "./style.css"
+import { Link } from 'react-router-dom';
 function Footer() {
     return (
         <footer>
@@ -14,7 +15,7 @@ function Footer() {
                         <div className="span_dicas_texto">
                             <p>Temos algumas dicas para o seu serviço ou freela ser um sucesso, acesse nossa página de
                                 recomendações para saber mais.</p>
-                            <a className="botao botao_dicas" href="#">mais dicas</a>
+                            <Link to="/" className="botao botao_dicas" >mais dicas</Link>
                         </div>
                 </div>
                 <div className="rodape_conteudo">
@@ -32,11 +33,11 @@ function Footer() {
                         <div className="rodape_conteudo_contatos">
                             <h2>Contatos</h2>
                             <div>
-                                <a href="#"><img src={imgFacebook} alt=""/></a>
-                                <a href="#"><img src={imgInstagram} alt=""/></a>
-                                <a href="#"><img src={imgLinkedin} alt=""/></a>
+                                <Link to={"/"}><img src={imgFacebook} alt=""/></Link>
+                                <Link to={"/"}><img src={imgInstagram} alt=""/></Link>
+                                <Link to={"/"}><img src={imgLinkedin} alt=""/></Link>
                             </div>
-                            <a href="mailto:">contato@vsconnect.com</a>
+                            <Link to="mailto:">contato@vsconnect.com</Link>
                         </div>
                 </div>
                 <p>todos os direitos reservados ©.</p>

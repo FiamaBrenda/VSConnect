@@ -2,9 +2,7 @@ import "./style.css";
 import imgCliente from "../../assets/images/clientes.png";
 import imgMaosDev from "../../assets/images/maos_dev.png";
 import imgAlfinete from "../../assets/images/alfinete.png";
-
-/* import Footer from "../../components/Footer";
-import Header from "../../components/Header"; */
+import { Link } from 'react-router-dom';
 
 
 function Home() {
@@ -14,7 +12,6 @@ function Home() {
     return (
         <div>
             
-          {/*   <Header/> */}
             <main id="main">
                 <h1>página inicial VSconnect</h1>
                 <section className="banner">
@@ -24,8 +21,8 @@ function Home() {
                             oportunidades.</p>
                         <p className="banner_slogan_l3">Conecte-se e comece a desvendar esse mundo!</p>
                         <div className="banner_botoes">
-                            <a className="botao banner_botao_dev" href="#">desenvolvedor</a>
-                            <a className="botao banner_botao_cli" href="#">cliente</a>
+                            <Link to="/" className="botao banner_botao_dev" >desenvolvedor</Link >
+                            <Link to="/" className="botao banner_botao_cli" >cliente</Link >
                         </div>
                     </div>
                 </section>
@@ -42,7 +39,7 @@ function Home() {
                                 <li>procurar por desenvolvedores</li>
                             </ul>
                             <div>
-                                <a className="botao clientes_botao_cli" href="#">criar conta</a>
+                                <Link to="/" className="botao clientes_botao_cli" >criar conta</Link >
                             </div>
                         </div>
                     </div>
@@ -56,7 +53,7 @@ function Home() {
                             <li>divulgar suas hardskills</li>
                         </ul>
                         <div>
-                            <a className="botao clientes_botao_devs" href="#">criar conta</a>
+                            <Link to="/" className="botao clientes_botao_devs" >criar conta</Link >
                         </div>
                     </div>
                     <img src={imgMaosDev} alt="" />
@@ -79,10 +76,9 @@ function Home() {
                             <p>Proposta: R$750,00</p>
                         </div>
                     </div>
-                    <a href="#">Ver mais serviços</a>
+                    <Link to="lista/servicos">Ver mais serviços</Link >
                 </section>
             </main>
-          {/*   <Footer/> */}
         </div>
     );
 }
