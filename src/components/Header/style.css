@@ -19,7 +19,7 @@ header {
     width: 50px;
 }
 
-.barras{
+.barras {
     /* border-top: 5px solid var(--branco); */
     width: 40px;
     height: 5px;
@@ -31,7 +31,7 @@ header {
     transition: .5s;
 }
 
-.barras::after{
+.barras::after {
     content: '';
     display: block;
     width: 40px;
@@ -43,7 +43,7 @@ header {
     transition: .5s;
 }
 
-.barras::before{
+.barras::before {
     content: '';
     display: block;
     width: 40px;
@@ -55,17 +55,17 @@ header {
     transition: .5s;
 }
 
-.ativo .barras{
+.ativo .barras {
     /* background-color: transparent; */
     transform: rotate(135deg);
 }
 
-.ativo .barras::after{
+.ativo .barras::after {
     transform: rotate(-270deg);
     top: 0;
 }
 
-.ativo .barras::before{
+.ativo .barras::before {
     /* transform: rotate(90deg); */
     top: 0;
 }
@@ -105,18 +105,18 @@ header nav a {
     font-family: var(--font1);
 }
 
-.header_icone_login{
+.header_icone_login {
     display: none;
 }
 
-
 @media screen and (max-width: 768px) {
+
     /* HEADER */
     .menu_barras {
         display: initial;
     }
 
-    .header_logo{
+    .header_logo {
         /* margin-left: 55px; */
     }
 
@@ -150,7 +150,7 @@ header nav a {
         width: auto;
     }
 
-    .header_botao_login{
+    .header_botao_login {
         display: none;
     }
 
@@ -162,3 +162,4 @@ header nav a {
         width: 35px;
         fill: var(--branco);
     }
+}

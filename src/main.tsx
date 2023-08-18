@@ -1,34 +1,31 @@
+import React from 'react';
+import ReactDOM from 'react-dom/client';
 
-import React from 'react'
-import ReactDOM from 'react-dom/client'
+//componentes
+import Home from "./pages/Home/";
+import ListaServicos from "./pages/ListaServicos/";
+import ListaDevs from "./pages/ListaDevs";
+import Footer from "./components/Footer"
+import Header from './components/Header';
+import PerfilUsuario from "./pages/PerfilUsuario"
 
-// componentes
-import Home from './pages/Home/'
+//estilização global
+import "./index.css";
 
-// estilizacao
-import './index.css'
-
-import ListaServicos from './pages/ListaServicos'
-import Footer from './components/Footer'
-import Header from './components/Header'
-import ListaDevs from './pages/ListaDevs'
-
-// rotas
-import { Route, BrowserRouter, Routes } from 'react-router-dom';
-
+//rotas
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-
-    <BrowserRouter>
+    <BrowserRouter> {/*Indica que aplicação terá rotas*/}
       <Header />
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='lista/servicos' element={<ListaServicos/>} />
-        <Route path='ListaDevs' element={<ListaDevs/>} />
+      <Routes>{/*Indica uma lista de rotas*/}
+        <Route path='/' element={<Home />} /> {/*Indica o caminho do componente e o nome da rota dele*/}
+        <Route path='lista/servicos' element={<ListaServicos />} />
+        <Route path='perfil/:idUsuario' element={<PerfilUsuario/>}/>
+        <Route path='lista/devs' element={<ListaDevs />} />
       </Routes>
       <Footer />
     </BrowserRouter>
   </React.StrictMode>
 )
-

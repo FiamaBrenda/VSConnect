@@ -1,9 +1,8 @@
-
 .dev {
     height: 70px;
     width: 85%;
     margin: 0 auto;
-    
+
     display: flex;
     justify-content: space-between;
 

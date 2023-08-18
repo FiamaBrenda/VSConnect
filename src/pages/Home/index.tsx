@@ -1,17 +1,18 @@
+//estilização
 import "./style.css";
-import imgCliente from "../../assets/images/clientes.png";
+
+//imagens
+import imgClientes from "../../assets/images/clientes.png";
 import imgMaosDev from "../../assets/images/maos_dev.png";
 import imgAlfinete from "../../assets/images/alfinete.png";
-import { Link } from 'react-router-dom';
 
+//rotas
+import { Link } from "react-router-dom";
 
 function Home() {
 
-
-
     return (
-        <div>
-            
+        <>
             <main id="main_home">
                 <h1>página inicial VSconnect</h1>
                 <section className="banner">
@@ -21,8 +22,8 @@ function Home() {
                             oportunidades.</p>
                         <p className="banner_slogan_l3">Conecte-se e comece a desvendar esse mundo!</p>
                         <div className="banner_botoes">
-                            <Link to="/" className="botao banner_botao_dev" >desenvolvedor</Link >
-                            <Link to="/" className="botao banner_botao_cli" >cliente</Link >
+                            <Link className="botao banner_botao_dev" to="#">desenvolvedor</Link>
+                            <Link className="botao banner_botao_cli" to="#">cliente</Link>
                         </div>
                     </div>
                 </section>
@@ -31,15 +32,15 @@ function Home() {
                         <p>Desde 2015 unindo propósitos.<br />Uma nova forma de conectar pessoas.</p>
                     </div>
                     <div className="clientes_conteudo">
-                        <img src={imgCliente} alt="" />
+                        <img src={imgClientes} alt="" />
                         <div className="clientes_texto">
                             <h2>para clientes</h2>
                             <ul>
-                                <li>cadastrar serviços</li>
-                                <li>procurar por desenvolvedores</li>
+                                <li><Link to={""}>cadastrar serviços</Link></li>
+                                <li><Link to={"lista/devs"}>procurar por desenvolvedores</Link></li>
                             </ul>
                             <div>
-                                <Link to="/" className="botao clientes_botao_cli" >criar conta</Link >
+                                <Link className="botao clientes_botao_cli" to="#">criar conta</Link>
                             </div>
                         </div>
                     </div>
@@ -49,11 +50,13 @@ function Home() {
                     <div className="devs_texto">
                         <h2>para desenvolvedores</h2>
                         <ul>
-                            <li>encontrar serviços</li>
-                            <li>divulgar suas hardskills</li>
+                            <li>
+                                <Link to={"lista/servicos"}>encontrar serviços</Link>
+                            </li>
+                            <li><Link to={"#"}>divulgar suas hardskills</Link></li>
                         </ul>
                         <div>
-                            <Link to="/" className="botao clientes_botao_devs" >criar conta</Link >
+                            <Link className="botao clientes_botao_devs" to="#">criar conta</Link>
                         </div>
                     </div>
                     <img src={imgMaosDev} alt="" />
@@ -76,11 +79,12 @@ function Home() {
                             <p>Proposta: R$750,00</p>
                         </div>
                     </div>
-                    <Link to="lista/servicos">Ver mais serviços</Link >
+                    <Link to={"lista/servicos"}>Ver mais serviços</Link>
                 </section>
             </main>
-        </div>
+        </>
     );
 }
 
+//o componente Home pode ser chamado em outros arquivos
 export default Home;
