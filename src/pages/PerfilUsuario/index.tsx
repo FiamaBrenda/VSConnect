@@ -50,7 +50,7 @@ function PerfilUsuario() {
 
                     <div className="topo_dev">
                         <img src={"http://localhost:3000/static/" + foto} alt={"Foto de perfil de" + nome} />
-                        <h2>{nome}</h2>
+                       <h2>{nome}</h2>
                     </div>
 
                     <div className="contato_local">

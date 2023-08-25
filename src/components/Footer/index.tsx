@@ -35,22 +35,22 @@ function Footer() {
                         <h2>Páginas</h2>
                         <ul>
                             <li>
-                                <Link to={"#"}>Login</Link>
+                                <Link to={"/Login"}>Login</Link>
                             </li>
                             <li>
                                 <Link to={"/"}>Home</Link>
                             </li>
                             <li>
-                                <Link to={"lista/servicos"}>Listar Serviços</Link>
+                                <Link to={"/lista/servicos"}>Listar Serviços</Link>
                             </li>
                             <li>
-                                <Link to={"lista/devs"}>Listar Desenvolvedores</Link>
+                                <Link to={"/lista/devs"}>Listar Desenvolvedores</Link>
                             </li>
                             <li>
-                                <Link to={"#"}>Cadastrar Cliente</Link>
+                                <Link to={"/Cadastro/Usuario"}>Cadastrar Cliente</Link>
                             </li>
                             <li>
-                                <Link to={"#"}>Cadastrar Desenvolvedor</Link>
+                                <Link to={"/Cadastro/Usuario"}>Cadastrar Desenvolvedor</Link>
                             </li>
                         </ul>
                     </div>
